@@ -10,10 +10,6 @@ app.get('/users', HOME_CONTROLLER.users);
 app.post('/users/create', HOME_CONTROLLER.create);
 
 app.listen(3000, () => {
-  printMemoryUsage();
+  console.log('Application listening On Port 3000');
 });
 
-function printMemoryUsage() {
-  const used = process.memoryUsage().heapUsed / 1024 / 1024;
-  console.log(`The script uses approximately ${Math.round(used * 100) / 100} MB`);
-}

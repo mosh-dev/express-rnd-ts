@@ -12,10 +12,20 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     filename: 'app.js'
   },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        node_vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          chunks: "all",
+          priority: 1
+        }
+      }
+    }
+  },
   resolve: {
     extensions: [".ts", ".js"]
   },
-  devtool: "source-map",
   module: {
     rules: [
       {

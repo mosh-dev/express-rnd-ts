@@ -1,19 +1,20 @@
 export default class User {
 
-    username: String;
-    name: String;
-    email: String;
+  username: string;
+  name: string;
+  email: string;
 
-    constructor(name: String, username: String, email: String) {
-        this.name = name;
-        this.username = username;
-        this.email = email;
-    }
+  constructor(name: string, username: string, email: string) {
+    this.name = name;
+    this.username = username;
+    this.email = email;
+  }
 
-    getUsername() {
-        return this.username;
-    }
-    getName() {
-        return this.name;
-    }
+  getUsername() {
+    return this.username;
+  }
+
+  getName() {
+    return this.name;
+  }
 }

@@ -10,7 +10,7 @@ const index = (req: Request, res: Response) => {
   if (!existsSync(FILES_DIR)) {
     mkdirSync(FILES_DIR);
   }
-  appendFileSync('./files/name.txt', 'Tushar');
+  appendFileSync('./files/name.txt', 'Holl molly');
   res.json(readFileSync('./files/name.txt').toString('utf8'));
 };
 const users = (req: Request, res: Response) => res.json(usersList);
