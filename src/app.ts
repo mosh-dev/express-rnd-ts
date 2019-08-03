@@ -4,6 +4,8 @@ import {configure} from './config';
 import {AUTH_ROUTES} from './routes/auth-routes';
 import {DEFAULT_ROUTES} from './routes';
 
+require('dotenv').config();
+
 configure().then();
 
 const app = express();
