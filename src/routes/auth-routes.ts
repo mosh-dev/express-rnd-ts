@@ -1,8 +1,10 @@
 import {Router} from 'express';
 import {AUTH_CONTROLLER} from '../controllers/auth.controller';
 
-export const AUTH_ROUTES = Router();
+const router = Router();
 
-AUTH_ROUTES
+router
   .get('/login', AUTH_CONTROLLER.index)
   .get('/logout', AUTH_CONTROLLER.logout);
+
+export const AUTH_ROUTES = router;
